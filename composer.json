@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "digitonic/iex-cloud-sdk": "^0.1.0",
         "fideloper/proxy": "^4.0",
         "laravel-frontend-presets/argon": "^1.0",
         "laravel/framework": "^6.2",
