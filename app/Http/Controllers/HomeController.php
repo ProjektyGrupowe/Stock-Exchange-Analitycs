@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\json_decode;
+
 class HomeController extends Controller
 {
     /**
@@ -22,5 +25,27 @@ class HomeController extends Controller
     public function index()
     {
         return view('dashboard');
+    }
+
+    public function getCompany(Request $request){
+        $client = new Client();
+
+        $name = $request->input('name');
+
+        $nameEndpoint = "https://cloud.iexapis.com/stable/stock/"
+        . $name . "/batch?types=quote,news,chart&range=1m&last=10?"
+        . "token=" . env(IEX_CLOUD_PUBLIC_KEY);
+
+        $nameResponse = $client->request('GET', $nameEndpoint);
+        $nameResponseBody = $nameResponse->getBody();
+        $nameResponseJSON = json_decode($nameResponseBody);
+
+        $chart = $nameResponseJSON->chart->open;
+
+        $result = view('dashboard')
+            -> with('chart', $chart);
+
+        return $result;
+
     }
 }
