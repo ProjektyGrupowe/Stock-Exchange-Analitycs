@@ -65,7 +65,7 @@ class HomeController extends Controller
         error_log(print_r($arrayOfOpenValues));
         error_log(print_r($arrayOfDates));
         
-        return $result;
+        return view('dashboard', compact($arrayOfOpenValues));
     }
 }
 
