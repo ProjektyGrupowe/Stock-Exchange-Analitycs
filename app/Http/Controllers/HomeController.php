@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function getCompany(Request $request){
 
-        $publicKey = 'pk_8936f153936f4ee3b77122727d80bead';
+        $publicKey = 'pk_d648abdcb291433392e2a00bc9d20ca8';
 
         $client = new Client();
 
