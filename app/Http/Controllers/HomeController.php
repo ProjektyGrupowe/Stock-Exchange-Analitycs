@@ -47,13 +47,9 @@ class HomeController extends Controller
         $nameResponse = $client->request('GET', $nameEndpoint);
         $nameResponseBody = $nameResponse->getBody();
         $nameResponseJSON = json_decode($nameResponseBody);
-
-        $apiData = $nameResponseJSON->quote;
         
         $result = view('dashboard')
-            -> with('apiData', $apiData);
-
-        print_r($apiData);
+            -> with('nameResponseJSON', $nameResponseJSON);
         
         return $result;
     }
