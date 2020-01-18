@@ -49,16 +49,19 @@ class HomeController extends Controller
         $nameResponseBody = $nameResponse->getBody();
         $nameResponseJSON = json_decode($nameResponseBody);
 
-
         $chart = $nameResponseJSON->chart;
+        $test = [];
+
+        foreach($chart as $openData) {
+            array_push($test, $openData->open);
+        }
         
 
         $result = view('dashboard')
             -> with('chart', $chart);
         
-        //error_log(print_r($chart));
+        error_log(print_r($test));
         
         return $result;
-
     }
 }
