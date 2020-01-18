@@ -26,27 +26,18 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Page name</th>
-                                    <th scope="col">Visitors</th>
-                                    <th scope="col">Unique users</th>
-                                    <th scope="col">Bounce rate</th>
+                                    <th scope="col">Company symbol</th>
+                                    <th scope="col">Company Name</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @foreach($apiData as $data)
                                 <tr>
                                     <th scope="row">
-                                        /argon/
+                                        {{ $data }}
                                     </th>
-                                    <td>
-                                        4,569
-                                    </td>
-                                    <td>
-                                        340
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
-                                    </td>
                                 </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

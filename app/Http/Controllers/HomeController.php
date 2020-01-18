@@ -39,7 +39,7 @@ class HomeController extends Controller
 
         $nameEndpoint = "https://cloud.iexapis.com/stable/stock/"
 
-        . $name . "/batch?types=quote,news,chart&range=7d&last=10&"
+        . $name . "/batch?types=quote,news,chart&range=1m&last=10&"
         . "token=" . $publicKey;
 
 
@@ -48,10 +48,12 @@ class HomeController extends Controller
         $nameResponseBody = $nameResponse->getBody();
         $nameResponseJSON = json_decode($nameResponseBody);
 
-        $apiData = $nameResponseJSON;
+        $apiData = $nameResponseJSON->quote;
         
         $result = view('dashboard')
             -> with('apiData', $apiData);
+
+        print_r($apiData);
         
         return $result;
     }
