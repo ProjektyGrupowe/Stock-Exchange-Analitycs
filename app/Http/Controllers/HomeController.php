@@ -50,12 +50,14 @@ class HomeController extends Controller
         $nameResponseJSON = json_decode($nameResponseBody);
 
 
-        $chart = $nameResponseJSON->chart[0];
+        $chart = $nameResponseJSON->chart;
         
 
         $result = view('dashboard')
             -> with('chart', $chart);
-
+        
+        //error_log(print_r($chart));
+        
         return $result;
 
     }
