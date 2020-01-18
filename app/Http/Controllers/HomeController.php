@@ -39,7 +39,7 @@ class HomeController extends Controller
 
         $nameEndpoint = "https://cloud.iexapis.com/stable/stock/"
 
-        . $name . "/batch?types=quote,news,chart&range=1m&last=10&"
+        . $name . "/batch?types=quote,news,chart&range=7d&last=10&"
         . "token=" . $publicKey;
 
 
