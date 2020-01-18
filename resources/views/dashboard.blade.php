@@ -140,13 +140,6 @@
                         </table>
                     </div>
                 </div>
-                <div>
-                    <form action="{{ route('get.companyName') }} "method="get" enctype="multipart/form-data" class="row">
-                    <input type="text" value="DAWAJ NAZWE" name="name">
-                    <br>
-                    <input type="submit" value="wyślij Dzbana" name="elo">
-                    </form>
-                </div>
             </div>
         </div>
 
