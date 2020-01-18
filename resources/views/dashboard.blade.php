@@ -144,7 +144,11 @@
                     <form action="{{ route('get.companyName') }} "method="get" enctype="multipart/form-data" class="row">
                     <input type="text" value="DAWAJ NAZWE" name="name">
                     <br>
+<<<<<<< HEAD
                     <input type="submit" value="wyślij Dzbana" name="elo">
+=======
+                    <input type="submit" value="wyślij" name="elo">
+>>>>>>> 4087e0dda492bdde46baf62fb8201aa999112faf
                     </form>
                 </div>
             </div>
