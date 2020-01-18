@@ -5,12 +5,19 @@
     
     <div class="container-fluid mt--7">
         <div class="row mt-5">
-            <div class="col-xl-12 mb-5 mb-xl-0">
+            <div class="col-xl-12 mb-6 mb-xl-0">
                 <div>
                     <form action="{{ route('get.companyName') }} "method="get" enctype="multipart/form-data" class="row">
-                    <input type="text" value="DAWAJ NAZWE" name="name">
-                    <br>
-                    <input type="submit" value="wyślij Dzbana" name="elo">
+                        
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                            </div>
+                            <input type="text" placeholder="Enter company name" name="name">
+                            <div class="col-md-3">
+                                <input type="submit" class="btn btn-primary my-2" value="Search" name="elo">
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

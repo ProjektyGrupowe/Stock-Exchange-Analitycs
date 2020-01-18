@@ -50,7 +50,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Company Search') }}
+                        <i class="ni ni-zoom-split-in text-primary"></i> {{ __('Company Search') }}
                     </a>
                 </li>
                 <li class="nav-item">
