@@ -50,11 +50,9 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
+                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Company Search') }}
                     </a>
                 </li>
-            </ul>
-            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profile.edit') }}">
                         <i class="ni ni-single-02 text-primary"></i> {{ __('My profile') }}
