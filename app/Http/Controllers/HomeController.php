@@ -48,18 +48,22 @@ class HomeController extends Controller
         $nameResponseBody = $nameResponse->getBody();
         $nameResponseJSON = json_decode($nameResponseBody);
 
-        $test = [];
+        $arrayOfOpenValues = [];
+        $arrayOfDates = [];
 
         $chart = $nameResponseJSON->chart;
-        foreach($chart as $openData) {
-            array_push($test, $openData->open);
+        
+        foreach($chart as $item) {
+            array_push($arrayOfOpenValues, $item->open);
+            array_push($arrayOfDates, $item->date);
         }
         
 
         $result = view('dashboard')
             -> with('chart', $chart);
         
-        error_log(print_r($test));
+        error_log(print_r($arrayOfOpenValues));
+        error_log(print_r($arrayOfDates));
         
         return $result;
     }
