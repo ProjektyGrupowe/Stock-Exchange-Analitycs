@@ -1,8 +1,8 @@
-StockExchangeAnalytics
+##StockExchangeAnalytics
 
-Simple PHP App for 2019 PHP Class
+#Simple PHP App for 2019 PHP Class
 
-Used Technologies:
+#Used Technologies:
 
     PHP
     Laravel
@@ -11,7 +11,7 @@ Used Technologies:
     HTML
     CSS
 
-Requirements:
+#Requirements:
 
     Artisan
     Composer
