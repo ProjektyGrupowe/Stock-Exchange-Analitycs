@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cde2b3aac05fd2f19578d672a2d5dadf",
+    "content-hash": "b30a9b30bc9ca73f38d4cac9144d329c",
     "packages": [
         {
             "name": "digitonic/iex-cloud-sdk",
