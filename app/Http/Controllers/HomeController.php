@@ -7,7 +7,6 @@ use GuzzleHttp\json_decode;
 
 use Illuminate\Http\Request;
 
-
 class HomeController extends Controller
 {
     /**
@@ -49,9 +48,9 @@ class HomeController extends Controller
         $nameResponseBody = $nameResponse->getBody();
         $nameResponseJSON = json_decode($nameResponseBody);
 
-        $chart = $nameResponseJSON->chart;
         $test = [];
 
+        $chart = $nameResponseJSON->chart;
         foreach($chart as $openData) {
             array_push($test, $openData->open);
         }
@@ -65,3 +64,4 @@ class HomeController extends Controller
         return $result;
     }
 }
+

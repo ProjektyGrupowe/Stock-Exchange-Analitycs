@@ -964,8 +964,8 @@ var OrdersChart = (function() {
 			data: {
 				labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 				datasets: [{
-					label: 'Sales',
-					data: [25, 20, 30, 22, 17, 29]
+					label: 'Open Value',
+					data: chart_data
 				}]
 			}
 		});
